@@ -11,6 +11,7 @@ package ejercicio1;
  */
 public class Probar {
     public static void main(String[] args) {
+        
         Persona p=new Persona();
         p.altura=1.65f;
         p.peso=78;
