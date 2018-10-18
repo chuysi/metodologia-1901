@@ -167,8 +167,10 @@ public class PresentacionText extends javax.swing.JFrame {
              break;
          }   
         }
+        System.out.println("El indice seleccionado es:"+indiceSeleccionado);
+        JOptionPane.showConfirmDialog(this,""+ evaluar(p1,indiceSeleccionado));
         
-        JOptionPane.showConfirmDialog(this,""+evaluar(p1,radios[indiceSeleccionado]));
+
     }//GEN-LAST:event_checarRespuestaActionPerformed
 
     /**
@@ -217,24 +219,14 @@ public class PresentacionText extends javax.swing.JFrame {
     private javax.swing.JRadioButton radioOp5;
     // End of variables declaration//GEN-END:variables
 
-public boolean evaluar(Pregunta p, JRadioButton r){
-    boolean correcta=false;
-   
-    
-    
-    for(int i=0;i<p.opciones.length;i++){
-          if(opciones[i].titulo.equals(r.getText())){
-            if(p1.opciones[i].correcta){
-                correcta=true;
-                    break; 
-            }
-           
-        }
-    }
-    
-    return correcta;
-  }
+public boolean evaluar(Pregunta p, int indiceSeleccionado){
+boolean correcta=false;
 
+ if(p.opciones[indiceSeleccionado].correcta){
+     correcta=true;
+ }   
+ return correcta;
+}
 
 }
 
