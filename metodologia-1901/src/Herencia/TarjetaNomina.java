@@ -5,6 +5,8 @@
  */
 package Herencia;
 
+import com.sun.org.apache.bcel.internal.generic.SALOAD;
+
 /**
  *
  * @author T-107
@@ -12,7 +14,9 @@ package Herencia;
 public class TarjetaNomina extends Tarjeta{
 
     @Override
-    public void pagar() {
+    public void pagar(float deposito) {
+        setSaldo(getSaldo()+deposito);
+        
     }
      
 }

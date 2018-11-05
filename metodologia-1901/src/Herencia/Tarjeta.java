@@ -17,7 +17,7 @@ public abstract class Tarjeta {
     private float saldo;
     
     //metodo abstracto sin llvaes
-    public abstract void pagar();
+    public abstract void pagar(float deposito);
         
     
 
